@@ -5,6 +5,7 @@ const {injectBabelPlugin, getLoader} = require('react-app-rewired');
 const fileLoaderMatcher = function (rule) {
     return rule.loader && rule.loader.indexOf(`file-loader`) != -1;
 }
+const theme = require('./package.json').theme;
 /* config-overrides.js */
 module.exports = function override(config, env) {
     config = rewireMobX(config, env);
@@ -47,7 +48,7 @@ module.exports = function override(config, env) {
                     loader: require.resolve('less-loader'),
                     options: {
                         // theme vars, also can use theme.js instead of this.
-                        modifyVars: {"@brand-primary": "#1DA57A"},
+                        modifyVars: theme,
                     },
                 },
             ]

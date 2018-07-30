@@ -22,5 +22,9 @@
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
     "react-app-rewired": "^1.5.2"
+  },
+  "theme": {
+    "button-height": "50px",
+    "button-font-size": "22px"
   }
 }
